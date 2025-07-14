@@ -23,7 +23,7 @@ export function initSocketController(refClients, refConnections) {
  */
 export function handleIncomingMessage(bytes, uuid) {
     const message = JSON.parse(bytes.toString());
-    const user = clients.get(uuid); // ✅ FIXED
+    const user = clients.get(uuid);
 
     if (!user) {
         console.warn(`No user found for UUID: ${uuid}`);
